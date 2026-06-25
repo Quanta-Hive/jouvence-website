@@ -1,0 +1,316 @@
+{
+  "common": {
+    "siteName": "Parti Jouvence",
+    "siteTagline": "Cameroonian Youth in Politics",
+    "readMore": "Read more",
+    "readArticle": "Read article",
+    "loading": "Loading…",
+    "submit": "Submit",
+    "submitting": "Sending…",
+    "thankYou": "Thank you!",
+    "thankYouMessage": "Your message was received.",
+    "errorOccurred": "Something went wrong. Please try again.",
+    "switchLanguage": "Passer en français",
+    "languageShort": "EN"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "program": "Program",
+    "news": "News",
+    "getInvolved": "Get Involved",
+    "contact": "Contact",
+    "join": "Join us"
+  },
+  "footer": {
+    "tagline": "Cameroonian Youth in Politics. Together for a renewed, prosperous and just Cameroon.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "newsletter": "Newsletter",
+    "newsletterDescription": "Stay informed about our activities",
+    "newsletterEmailPlaceholder": "Your email",
+    "subscribe": "Subscribe",
+    "legal": "Legal notice",
+    "privacy": "Privacy policy",
+    "rights": "© 2026 Parti Jouvence. All rights reserved."
+  },
+  "home": {
+    "heroBadge": "Cameroonian Youth Political Party",
+    "heroTitle": "Give Cameroon back to",
+    "heroTitleHighlight": "Cameroonians",
+    "heroSubtitlePrefix": "For a true",
+    "heroSubtitleHighlight": "effective emergence",
+    "heroSubtitleSuffix": "by 2035",
+    "heroCtaPrimary": "Join the movement",
+    "heroCtaSecondary": "Our Vision",
+    "leaderTitle": "LEADER OF JOUVENCE",
+    "membersBadge": "Members",
+    "statsLabels": {
+      "youth": "Youth under 35",
+      "youthDesc": "75% of Cameroon's population",
+      "population": "Total population",
+      "populationDesc": "Inhabitants of Cameroon",
+      "legal": "Legal party",
+      "legalDesc": "Since April 22, 2019",
+      "vision": "Emergence target",
+      "visionDesc": "National vision"
+    },
+    "pillars": {
+      "kicker": "Our Foundations",
+      "title": "The Pillars of Our Action",
+      "subtitle": "The values that guide our commitment to a better Cameroon",
+      "items": {
+        "youth": { "title": "Youth", "desc": "Empowering Cameroonian youth to innovate and lead" },
+        "integrity": { "title": "Integrity", "desc": "Transparency and accountability in all our political actions" },
+        "innovation": { "title": "Innovation", "desc": "Creative and modern solutions for Cameroon's challenges" },
+        "progress": { "title": "Progress", "desc": "Sustainable development and economic growth for all" }
+      }
+    },
+    "priorities": {
+      "kicker": "Overall Vision",
+      "title": "A United, Disciplined and Prosperous Cameroon",
+      "subtitle": "Three strategic priorities for every Cameroonian",
+      "cta": "See our full program",
+      "items": [
+        {
+          "label": "Priority 1",
+          "title": "Sovereignty & Integrity",
+          "actions": ["Full conquest of national sovereignty", "Preservation of territorial integrity", "Reinforced defense and security"]
+        },
+        {
+          "label": "Priority 2",
+          "title": "Order & Cohesion",
+          "actions": ["Return to republican order", "Strengthening national cohesion", "Fair and exemplary justice"]
+        },
+        {
+          "label": "Priority 3",
+          "title": "Emergence 2035",
+          "actions": ["Performing, participatory economy", "Social and solidarity-based development", "Modern, sustainable infrastructure"]
+        }
+      ]
+    },
+    "figures": {
+      "kicker": "National Context",
+      "title": "Cameroon in Numbers",
+      "subtitle": "Understand the stakes to better build the future",
+      "note": "Facing these realities, our project proposes concrete solutions to transform these challenges into opportunities and build a Cameroon that prospers for all.",
+      "items": [
+        { "value": "29.89M", "label": "Population", "sublabel": "Inhabitants" },
+        { "value": "75%", "label": "Youth under 35", "sublabel": "21 million young people" },
+        { "value": "$51.35B", "label": "2025 GDP", "sublabel": "Gross domestic product" },
+        { "value": "6.44%", "label": "Youth unemployment", "sublabel": "Official rate" },
+        { "value": "151/193", "label": "HDI ranking", "sublabel": "Human Development Index" },
+        { "value": "68%", "label": "Rural population", "sublabel": "Rural areas" },
+        { "value": "4-5M", "label": "Diaspora", "sublabel": "Cameroonians abroad" },
+        { "value": "577B", "label": "Diaspora transfers", "sublabel": "FCFA per year" }
+      ]
+    },
+    "aboutPreview": {
+      "kicker": "Who we are",
+      "title": "A movement born from conviction",
+      "body": "Parti Jouvence is a Cameroonian political party founded on the conviction that political renewal comes through youth. We carry a vision of hope, integrity and progress for our nation.",
+      "highlights": ["Transparent governance", "Inclusive economy", "Education for all"],
+      "cta": "Learn more"
+    },
+    "cta": {
+      "title": "Ready to be part of the",
+      "titleHighlight": "change",
+      "body": "Your voice matters. Join thousands of Cameroonians who are building the future of our nation together.",
+      "primary": "Become a member",
+      "secondary": "Contact us"
+    }
+  },
+  "about": {
+    "kicker": "About",
+    "title": "About",
+    "titleHighlight": "Parti Jouvence",
+    "subtitle": "A political movement born from the conviction that Cameroon deserves renewal, led by youth and guided by integrity.",
+    "vision": {
+      "title": "Our Vision",
+      "p1": "Make Cameroon a united, disciplined and prosperous Nation for all of its children. We aim to fully reclaim our sovereignty, protect the country's integrity, restore order and cohesion, and reach effective Emergence by 2035 through a performing, social, participatory and solidarity-based economy.",
+      "p2": "We believe in a transparent political system, an innovative economy, and a governance that places the collective interest above private ones."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "items": [
+        "Deeply reform institutions for an effective democracy",
+        "Gradually exit the CFA Franc Zone and build a sovereign economy",
+        "Resolve the Anglophone crisis through inclusive dialogue",
+        "Guarantee universal access to education, health, water and electricity",
+        "Build a full-employment system and value work and merit",
+        "Promote research and scientific and technological innovation"
+      ]
+    },
+    "values": {
+      "kicker": "Our Principles",
+      "title": "Our Values",
+      "items": [
+        { "title": "Integrity", "desc": "We act with transparency and honesty, placing national interest above everything." },
+        { "title": "Innovation", "desc": "We promote creative and modern solutions to Cameroon's challenges." },
+        { "title": "Inclusion", "desc": "We value the participation of everyone, regardless of background, gender or religion." },
+        { "title": "Responsibility", "desc": "We honour our commitments and remain accountable to citizens." },
+        { "title": "Excellence", "desc": "We aim for excellence in everything we do to serve the people." },
+        { "title": "Solidarity", "desc": "We believe in mutual support to build a strong society." }
+      ]
+    },
+    "leader": {
+      "kicker": "Our Leader",
+      "role": "LEADER OF JOUVENCE",
+      "bio1": "Dr. Valère Bertrand BESSALA is a visionary leader committed to the democratic renewal and development of Cameroon. He carries the political project \"LE PROJET\" of Parti JOUVENCE–JCP, candidate for the October 2025 presidential election in Cameroon.",
+      "bio2": "Parti JOUVENCE–JCP has been legally registered since April 22, 2019. Our headquarters are in Obili, Yaoundé. Dr. BESSALA has devoted his life to good governance, transparency, and Cameroonian youth empowerment.",
+      "quote": "The change we want to see in Cameroon will not come from outside. It will come from us — from our commitment, our determination to build together a country where everyone can fulfill their dreams."
+    },
+    "team": {
+      "kicker": "The Team",
+      "title": "Our Leadership Team"
+    }
+  },
+  "program": {
+    "kicker": "Vision 2035 — Effective Emergence",
+    "title": "An",
+    "titleHighlight": "Ambitious",
+    "titleSuffix": "Program to Transform Cameroon",
+    "subtitle": "Discover our detailed vision to build a united, disciplined and prosperous Cameroon. 5 strategic pillars, 33 chapters of concrete action for Emergence in 2035.",
+    "statLabels": {
+      "chantiers": "Strategic Pillars",
+      "chapters": "Detailed Chapters",
+      "vision": "Emergence Target"
+    },
+    "axesKicker": "The 5 Pillars",
+    "axesTitle": "Our Strategic Axes",
+    "chantier": "Pillar",
+    "chapters": "chapters",
+    "viewDetails": "View details",
+    "otherChapters": "more chapters…",
+    "measures": "concrete measures",
+    "detailedKicker": "Detailed Program",
+    "detailedTitle": "The 33 Chapters of Action",
+    "timeline": {
+      "kicker": "Implementation Schedule",
+      "title": "The Roadmap to 2035",
+      "phases": [
+        {
+          "period": "First 100 Days",
+          "icon": "⚡",
+          "actions": ["Full audit of public finances and state-owned enterprises", "Launch of the citizen transparency platform", "Creation of the Young Entrepreneurs Support Fund"]
+        },
+        {
+          "period": "First Year",
+          "icon": "🚀",
+          "actions": ["Start of education reform and school construction", "Progressive rollout of universal health insurance", "Digitalization of key administrative services"]
+        },
+        {
+          "period": "First Three Years",
+          "icon": "📈",
+          "actions": ["Broadband coverage on 80% of the territory", "Creation of 100,000 jobs in priority sectors", "Reduction of rural poverty by 30%"]
+        },
+        {
+          "period": "2035 — Effective Emergence",
+          "icon": "🏆",
+          "actions": ["A performing, competitive Cameroonian economy in Africa", "Universal access to drinking water and electricity", "Health and education coverage above 95%"]
+        }
+      ]
+    },
+    "cta": {
+      "title": "This Program Is",
+      "titleHighlight": "Yours",
+      "body": "We remain open to your suggestions and ideas to enrich our shared vision of tomorrow's Cameroon.",
+      "primary": "Share Your Feedback",
+      "secondary": "Join the Movement"
+    }
+  },
+  "news": {
+    "kicker": "News",
+    "title": "Our",
+    "titleHighlight": "News",
+    "subtitle": "Follow our activities, initiatives and events on the ground.",
+    "featured": "Featured",
+    "latest": "Latest News",
+    "empty": "No articles published yet.",
+    "backToNews": "Back to news",
+    "newsletterTitle": "Don't Miss Anything",
+    "newsletterSubtitle": "Subscribe to our newsletter to stay informed.",
+    "newsletterEmail": "Your email address",
+    "newsletterSubmit": "Subscribe"
+  },
+  "getInvolved": {
+    "kicker": "Engagement",
+    "title": "Join the",
+    "titleHighlight": "Movement",
+    "subtitle": "Change starts with you. Together, let's build the Cameroon we want to see.",
+    "options": [
+      { "title": "Become a member", "desc": "Become an official member and take part in our decisions.", "action": "join" },
+      { "title": "Volunteer", "desc": "Give your time to support our initiatives on the ground.", "action": "volunteer" },
+      { "title": "Donate", "desc": "Financially support our actions for a greater impact.", "action": "donate" }
+    ],
+    "optionsCta": "Let's go",
+    "joinTitle": "Become a Member of Parti Jouvence",
+    "joinSubtitle": "Fill out this form to become an official member",
+    "form": {
+      "fullName": "Full name",
+      "fullNamePlaceholder": "Your name",
+      "birthDate": "Date of birth",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+237 6XX XX XX XX",
+      "region": "Region",
+      "regionPlaceholder": "Select your region",
+      "city": "City",
+      "cityPlaceholder": "Your city",
+      "profession": "Profession",
+      "professionPlaceholder": "Your profession",
+      "motivation": "Why join Jouvence?",
+      "motivationPlaceholder": "Share your motivation…",
+      "terms": "I agree to Parti Jouvence's statutes and rules and commit to respecting the party's values.",
+      "submit": "Submit my application",
+      "required": "*"
+    },
+    "donateTitle": "Calls for Contributions",
+    "donateSubtitle": "Operation 500/FAP CENT for 77 million (87 million = candidacy file for 300 signatures + 30 million = deposit)",
+    "mobileMoney": "Mobile Money",
+    "bankTransfer": "Bank Transfer",
+    "accountNumber": "Number",
+    "accountIban": "IBAN",
+    "accountHolder": "Account holder",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "transparency": {
+      "title": "Transparency and Receipts",
+      "body": "All contributions are recorded and used transparently to finance the 300 signatures and the campaign deposit. A receipt will be sent to you."
+    },
+    "needHelp": "Need help?"
+  },
+  "contact": {
+    "kicker": "Contact",
+    "titleHighlight": "Contact",
+    "titleSuffix": " us",
+    "subtitle": "We're listening. Don't hesitate to reach out with any question or to join our movement.",
+    "formTitle": "Send us a message",
+    "formSubtitle": "We will get back to you as soon as possible.",
+    "form": {
+      "firstName": "First name",
+      "firstNamePlaceholder": "Your first name",
+      "lastName": "Last name",
+      "lastNamePlaceholder": "Your last name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "subjectPlaceholder": "Select a subject",
+      "subjects": ["Membership", "Volunteering", "Partnership", "Media / Press", "General question", "Other"],
+      "message": "Message",
+      "messagePlaceholder": "Write your message here…",
+      "submit": "Send message"
+    },
+    "infoTitle": "Information",
+    "infoSubtitle": "Find us through our different channels.",
+    "headquarters": "National Headquarters",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "social": "Social networks",
+    "hours": "Opening hours",
+    "mapTitle": "Interactive map",
+    "regionsKicker": "Presence",
+    "regionsTitle": "Our Regional Sections"
+  }
+}

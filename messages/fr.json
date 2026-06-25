@@ -1,0 +1,316 @@
+{
+  "common": {
+    "siteName": "Parti Jouvence",
+    "siteTagline": "Jeunesse Camerounaise en Politique",
+    "readMore": "Lire plus",
+    "readArticle": "Lire l'article",
+    "loading": "Chargement…",
+    "submit": "Envoyer",
+    "submitting": "Envoi en cours…",
+    "thankYou": "Merci !",
+    "thankYouMessage": "Votre message a bien été reçu.",
+    "errorOccurred": "Une erreur est survenue, veuillez réessayer.",
+    "switchLanguage": "Switch to English",
+    "languageShort": "FR"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "program": "Programme",
+    "news": "Actualités",
+    "getInvolved": "S'Engager",
+    "contact": "Contact",
+    "join": "Rejoignez-nous"
+  },
+  "footer": {
+    "tagline": "Jeunesse Camerounaise en Politique. Ensemble pour un Cameroun renouvelé, prospère et juste.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "newsletter": "Lettre d'Info",
+    "newsletterDescription": "Restez informé de nos activités",
+    "newsletterEmailPlaceholder": "Votre email",
+    "subscribe": "S'abonner",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "rights": "© 2026 Parti Jouvence. Tous droits réservés."
+  },
+  "home": {
+    "heroBadge": "Parti de la Jeunesse Camerounaise",
+    "heroTitle": "Rendre le Cameroun aux",
+    "heroTitleHighlight": "Camerounais",
+    "heroSubtitlePrefix": "Pour une",
+    "heroSubtitleHighlight": "émergence effective",
+    "heroSubtitleSuffix": "en 2035",
+    "heroCtaPrimary": "Rejoignez le mouvement",
+    "heroCtaSecondary": "Notre Vision",
+    "leaderTitle": "GUIDE DE JOUVENCE",
+    "membersBadge": "Membres",
+    "statsLabels": {
+      "youth": "Jeunes -35 ans",
+      "youthDesc": "75% de la population camerounaise",
+      "population": "Population Totale",
+      "populationDesc": "Habitants au Cameroun",
+      "legal": "Parti Légal",
+      "legalDesc": "Depuis le 22 Avril 2019",
+      "vision": "Objectif Émergence",
+      "visionDesc": "Vision nationale"
+    },
+    "pillars": {
+      "kicker": "Nos Fondements",
+      "title": "Les Piliers de Notre Action",
+      "subtitle": "Les valeurs qui guident notre engagement pour un Cameroun meilleur",
+      "items": {
+        "youth": { "title": "Jeunesse", "desc": "Donner le pouvoir à la jeunesse camerounaise d'innover et de diriger" },
+        "integrity": { "title": "Intégrité", "desc": "Transparence et responsabilité dans toutes nos actions politiques" },
+        "innovation": { "title": "Innovation", "desc": "Solutions créatives et modernes pour les défis du Cameroun" },
+        "progress": { "title": "Progrès", "desc": "Développement durable et croissance économique pour tous" }
+      }
+    },
+    "priorities": {
+      "kicker": "Vision Générale",
+      "title": "Un Cameroun Uni, Discipliné et Prospère",
+      "subtitle": "Trois priorités stratégiques pour tous les Camerounais",
+      "cta": "Voir notre programme complet",
+      "items": [
+        {
+          "label": "Priorité 1",
+          "title": "Souveraineté & Intégrité",
+          "actions": ["Conquête totale de la souveraineté nationale", "Préservation de l'intégrité du territoire", "Défense et sécurité renforcées"]
+        },
+        {
+          "label": "Priorité 2",
+          "title": "Ordre & Cohésion",
+          "actions": ["Retour à l'ordre républicain", "Renforcement de la cohésion nationale", "Justice juste et exemplaire"]
+        },
+        {
+          "label": "Priorité 3",
+          "title": "Émergence 2035",
+          "actions": ["Économie performante et participative", "Développement social et solidaire", "Infrastructure moderne et durable"]
+        }
+      ]
+    },
+    "figures": {
+      "kicker": "Contexte National",
+      "title": "Le Cameroun en Chiffres",
+      "subtitle": "Comprendre les enjeux pour mieux construire l'avenir",
+      "note": "Face à ces réalités, notre projet propose des solutions concrètes pour transformer ces défis en opportunités et construire un Cameroun prospère pour tous.",
+      "items": [
+        { "value": "29.89M", "label": "Population", "sublabel": "Habitants" },
+        { "value": "75%", "label": "Jeunes -35 ans", "sublabel": "21 millions de jeunes" },
+        { "value": "51.35Mds$", "label": "PIB 2025", "sublabel": "Produit Intérieur Brut" },
+        { "value": "6.44%", "label": "Chômage jeunes", "sublabel": "Taux officiel" },
+        { "value": "151/193", "label": "Classement IDH", "sublabel": "Indice Développement Humain" },
+        { "value": "68%", "label": "Population rurale", "sublabel": "Zones rurales" },
+        { "value": "4-5M", "label": "Diaspora", "sublabel": "Camerounais à l'étranger" },
+        { "value": "577Mds", "label": "Transferts diaspora", "sublabel": "FCFA par an" }
+      ]
+    },
+    "aboutPreview": {
+      "kicker": "Qui sommes-nous",
+      "title": "Un mouvement né de la conviction",
+      "body": "Parti Jouvence est un parti politique camerounais fondé sur la conviction que le renouveau politique passe par la jeunesse. Nous portons une vision d'espoir, d'intégrité et de progrès pour notre nation.",
+      "highlights": ["Gouvernance transparente", "Économie inclusive", "Éducation pour tous"],
+      "cta": "En savoir plus"
+    },
+    "cta": {
+      "title": "Prêt à faire partie du",
+      "titleHighlight": "changement",
+      "body": "Votre voix compte. Rejoignez des milliers de Camerounais qui construisent ensemble l'avenir de notre nation.",
+      "primary": "Adhérer au Parti",
+      "secondary": "Contactez-nous"
+    }
+  },
+  "about": {
+    "kicker": "À Propos",
+    "title": "À Propos de",
+    "titleHighlight": "Parti Jouvence",
+    "subtitle": "Un mouvement politique né de la conviction que le Cameroun mérite un renouveau, porté par la jeunesse et guidé par l'intégrité.",
+    "vision": {
+      "title": "Notre Vision",
+      "p1": "Faire du Cameroun une Nation unie, disciplinée et prospère pour tous ses enfants. Nous aspirons à conquérir totalement notre souveraineté, préserver l'intégrité du territoire, restaurer l'ordre et la cohésion nationale, et atteindre l'Émergence effective en 2035 par une économie performante, sociale, participative et solidaire.",
+      "p2": "Nous croyons en un système politique transparent, une économie innovante, et une gouvernance qui place l'intérêt collectif au-dessus des intérêts particuliers."
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "items": [
+        "Réformer profondément les institutions pour une démocratie effective",
+        "Sortir progressivement de la Zone Franc CFA et créer une économie souveraine",
+        "Résoudre définitivement la crise anglophone par le dialogue inclusif",
+        "Garantir l'accès universel à l'éducation, la santé, l'eau et l'électricité",
+        "Créer un système de plein emploi et valoriser le travail et le mérite",
+        "Promouvoir la recherche, l'innovation scientifique et technologique"
+      ]
+    },
+    "values": {
+      "kicker": "Nos Principes",
+      "title": "Nos Valeurs",
+      "items": [
+        { "title": "Intégrité", "desc": "Nous agissons avec transparence et honnêteté, en plaçant l'intérêt national au-dessus de tout." },
+        { "title": "Innovation", "desc": "Nous encourageons les solutions créatives et modernes pour résoudre les défis du Cameroun." },
+        { "title": "Inclusion", "desc": "Nous valorisons la participation de tous, indépendamment de l'origine, du genre ou de la religion." },
+        { "title": "Responsabilité", "desc": "Nous assumons nos engagements et rendons compte de nos actions aux citoyens." },
+        { "title": "Excellence", "desc": "Nous visons l'excellence dans tout ce que nous entreprenons pour servir le peuple." },
+        { "title": "Solidarité", "desc": "Nous croyons en l'entraide et au soutien mutuel pour construire une société forte." }
+      ]
+    },
+    "leader": {
+      "kicker": "Notre Leader",
+      "role": "GUIDE DE JOUVENCE",
+      "bio1": "Dr. Valère Bertrand BESSALA est un leader visionnaire engagé pour le renouveau démocratique et le développement du Cameroun. Il porte le projet politique \"LE PROJET\" du Parti JOUVENCE–JCP, candidat à l'élection présidentielle d'Octobre 2025 au Cameroun.",
+      "bio2": "Le Parti JOUVENCE–JCP est légal depuis le 22 Avril 2019. Notre siège est situé à Obili, Yaoundé. Dr. BESSALA a consacré sa vie à la promotion de la bonne gouvernance, de la transparence et de l'autonomisation de la jeunesse camerounaise.",
+      "quote": "Le changement que nous voulons voir au Cameroun ne viendra pas de l'extérieur. Il viendra de nous, de notre engagement, de notre détermination à construire ensemble un pays où chacun peut réaliser ses rêves."
+    },
+    "team": {
+      "kicker": "L'Équipe",
+      "title": "Notre Équipe Dirigeante"
+    }
+  },
+  "program": {
+    "kicker": "Vision 2035 — Émergence Effective",
+    "title": "Un Programme",
+    "titleHighlight": "Ambitieux",
+    "titleSuffix": "pour Transformer le Cameroun",
+    "subtitle": "Découvrez notre vision détaillée pour bâtir un Cameroun uni, discipliné et prospère. 5 chantiers stratégiques, 33 chapitres d'action concrète pour l'émergence de 2035.",
+    "statLabels": {
+      "chantiers": "Chantiers Stratégiques",
+      "chapters": "Chapitres Détaillés",
+      "vision": "Objectif Émergence"
+    },
+    "axesKicker": "Les 5 Chantiers",
+    "axesTitle": "Nos Axes Stratégiques",
+    "chantier": "Chantier",
+    "chapters": "chapitres",
+    "viewDetails": "Voir les détails",
+    "otherChapters": "autres chapitres…",
+    "measures": "mesures concrètes",
+    "detailedKicker": "Programme Détaillé",
+    "detailedTitle": "Les 33 Chapitres d'Action",
+    "timeline": {
+      "kicker": "Calendrier de Mise en Œuvre",
+      "title": "La Feuille de Route vers 2035",
+      "phases": [
+        {
+          "period": "100 Premiers Jours",
+          "icon": "⚡",
+          "actions": ["Audit complet des finances publiques et sociétés d'État", "Lancement de la plateforme citoyenne de transparence", "Création du Fonds d'appui aux jeunes entrepreneurs"]
+        },
+        {
+          "period": "Première Année",
+          "icon": "🚀",
+          "actions": ["Début de la réforme éducative et construction d'écoles", "Mise en place progressive de l'assurance maladie universelle", "Digitalisation des principaux services administratifs"]
+        },
+        {
+          "period": "Trois Premières Années",
+          "icon": "📈",
+          "actions": ["Couverture internet haut débit sur 80% du territoire", "Création de 100 000 emplois dans les secteurs prioritaires", "Réduction de 30% de la pauvreté en zones rurales"]
+        },
+        {
+          "period": "2035 — Émergence Effective",
+          "icon": "🏆",
+          "actions": ["Économie camerounaise performante et compétitive en Afrique", "Accès universel à l'eau potable et à l'électricité", "Taux de couverture santé et éducation supérieur à 95%"]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ce Programme, C'est le",
+      "titleHighlight": "Vôtre",
+      "body": "Nous restons à l'écoute de vos suggestions et idées pour enrichir notre vision commune du Cameroun de demain.",
+      "primary": "Donnez Votre Avis",
+      "secondary": "Rejoignez le Mouvement"
+    }
+  },
+  "news": {
+    "kicker": "Actualités",
+    "title": "Nos",
+    "titleHighlight": "Actualités",
+    "subtitle": "Suivez nos activités, initiatives et événements sur le terrain.",
+    "featured": "À la une",
+    "latest": "Dernières Nouvelles",
+    "empty": "Aucun article publié pour le moment.",
+    "backToNews": "Retour aux actualités",
+    "newsletterTitle": "Ne Manquez Aucune Actualité",
+    "newsletterSubtitle": "Inscrivez-vous à notre lettre d'information pour rester informé.",
+    "newsletterEmail": "Votre adresse email",
+    "newsletterSubmit": "S'inscrire"
+  },
+  "getInvolved": {
+    "kicker": "Engagement",
+    "title": "Rejoignez le",
+    "titleHighlight": "Mouvement",
+    "subtitle": "Le changement commence avec vous. Ensemble, construisons le Cameroun que nous voulons voir.",
+    "options": [
+      { "title": "Adhérer au Parti", "desc": "Devenez membre officiel et participez activement à nos décisions.", "action": "join" },
+      { "title": "Devenir Bénévole", "desc": "Donnez de votre temps pour soutenir nos initiatives sur le terrain.", "action": "volunteer" },
+      { "title": "Faire un Don", "desc": "Soutenez financièrement nos actions pour un impact plus grand.", "action": "donate" }
+    ],
+    "optionsCta": "C'est parti",
+    "joinTitle": "Adhérer à Parti Jouvence",
+    "joinSubtitle": "Remplissez ce formulaire pour devenir membre officiel",
+    "form": {
+      "fullName": "Nom complet",
+      "fullNamePlaceholder": "Votre nom",
+      "birthDate": "Date de naissance",
+      "email": "Email",
+      "emailPlaceholder": "votre.email@example.com",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+237 6XX XX XX XX",
+      "region": "Région",
+      "regionPlaceholder": "Sélectionnez votre région",
+      "city": "Ville",
+      "cityPlaceholder": "Votre ville",
+      "profession": "Profession",
+      "professionPlaceholder": "Votre profession",
+      "motivation": "Pourquoi rejoindre Jouvence ?",
+      "motivationPlaceholder": "Partagez vos motivations…",
+      "terms": "J'accepte les statuts et règlements de Parti Jouvence et m'engage à respecter les valeurs du parti.",
+      "submit": "Soumettre ma candidature",
+      "required": "*"
+    },
+    "donateTitle": "Appels à Contributions",
+    "donateSubtitle": "Opération 500/FAP CENT pour 77 millions (87 millions = dossier de candidature pour 300 signatures +30 millions = caution)",
+    "mobileMoney": "Mobile Money",
+    "bankTransfer": "Virement Bancaire",
+    "accountNumber": "Numéro",
+    "accountIban": "IBAN",
+    "accountHolder": "Intitulé compte",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "transparency": {
+      "title": "Transparence et Reçu Fiscal",
+      "body": "Toutes les contributions sont enregistrées et utilisées de manière transparente pour financer les 300 signatures et la caution de campagne. Un reçu vous sera envoyé."
+    },
+    "needHelp": "Besoin d'aide ?"
+  },
+  "contact": {
+    "kicker": "Contact",
+    "titleHighlight": "Contactez",
+    "titleSuffix": "-nous",
+    "subtitle": "Nous sommes à votre écoute. N'hésitez pas à nous contacter pour toute question ou pour rejoindre notre mouvement.",
+    "formTitle": "Envoyez-nous un message",
+    "formSubtitle": "Nous vous répondrons dans les plus brefs délais.",
+    "form": {
+      "firstName": "Prénom",
+      "firstNamePlaceholder": "Votre prénom",
+      "lastName": "Nom",
+      "lastNamePlaceholder": "Votre nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Sélectionnez un sujet",
+      "subjects": ["Adhésion au parti", "Bénévolat", "Partenariat", "Médias / Presse", "Question générale", "Autre"],
+      "message": "Message",
+      "messagePlaceholder": "Écrivez votre message ici…",
+      "submit": "Envoyer le message"
+    },
+    "infoTitle": "Informations",
+    "infoSubtitle": "Retrouvez-nous via nos différents canaux.",
+    "headquarters": "Siège National",
+    "phoneLabel": "Téléphone",
+    "emailLabel": "Email",
+    "social": "Réseaux sociaux",
+    "hours": "Horaires d'ouverture",
+    "mapTitle": "Carte interactive",
+    "regionsKicker": "Présence",
+    "regionsTitle": "Nos Sections Régionales"
+  }
+}
