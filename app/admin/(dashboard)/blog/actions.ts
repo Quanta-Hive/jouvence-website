@@ -53,9 +53,13 @@ export async function updateBlogPost(id: string, input: BlogPostInput): Promise<
   }
 
   const data = parsed.data;
+  let oldSlugFr: string | null = null;
+  let oldSlugEn: string | null = null;
   try {
     const existing = await prisma.blogPost.findUnique({ where: { id } });
     if (!existing) return { ok: false, error: "Introuvable" };
+    oldSlugFr = existing.slugFr;
+    oldSlugEn = existing.slugEn;
 
     const willPublish = data.status === "PUBLISHED";
     const wasPublished = existing.status === "PUBLISHED";
@@ -75,13 +79,25 @@ export async function updateBlogPost(id: string, input: BlogPostInput): Promise<
   revalidatePath("/admin/blog");
   revalidatePath("/fr/news");
   revalidatePath("/en/news");
+  revalidatePath(`/fr/news/${oldSlugFr}`);
+  revalidatePath(`/en/news/${oldSlugEn}`);
+  if (data.slugFr !== oldSlugFr) revalidatePath(`/fr/news/${data.slugFr}`);
+  if (data.slugEn !== oldSlugEn) revalidatePath(`/en/news/${data.slugEn}`);
   redirect("/admin/blog");
 }
 
 export async function deleteBlogPost(id: string) {
   await requireUser();
+  const existing = await prisma.blogPost.findUnique({
+    where: { id },
+    select: { slugFr: true, slugEn: true },
+  });
   await prisma.blogPost.delete({ where: { id } });
   revalidatePath("/admin/blog");
   revalidatePath("/fr/news");
   revalidatePath("/en/news");
+  if (existing) {
+    revalidatePath(`/fr/news/${existing.slugFr}`);
+    revalidatePath(`/en/news/${existing.slugEn}`);
+  }
 }

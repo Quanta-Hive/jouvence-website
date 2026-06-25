@@ -11,6 +11,19 @@ type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  const posts = await prisma.blogPost.findMany({
+    where: { status: "PUBLISHED" },
+    select: { slugFr: true, slugEn: true },
+  });
+  return posts.flatMap((post) => [
+    { locale: "fr", slug: post.slugFr },
+    { locale: "en", slug: post.slugEn },
+  ]);
+}
+
 export async function generateMetadata({ params }: Props) {
   const { locale: raw, slug } = await params;
   const locale = resolveLocale(raw);

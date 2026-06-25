@@ -4,6 +4,8 @@ import { Footer } from "@/components/site/footer";
 import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
 import { getSiteInfo } from "@/lib/site-settings";
 
+export const revalidate = 3600;
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }

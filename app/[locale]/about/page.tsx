@@ -6,6 +6,8 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
+export const revalidate = 3600;
+
 export default async function AboutPage({ params }: Props) {
   const { locale: raw } = await params;
   const locale = resolveLocale(raw);
