@@ -6,10 +6,20 @@ import {
   Inbox,
   Mail,
   TrendingUp,
+  Wallet,
 } from "lucide-react";
 import { prisma } from "@/lib/db";
+import { requireSection } from "@/lib/auth";
+import { hasAccess, type Section } from "@/lib/permissions";
 
 export default async function AdminDashboardPage() {
+  const session = await requireSection("dashboard");
+  const role = session.user.role;
+
+  const wantsContent = hasAccess(role, "blog");
+  const wantsSubmissions = hasAccess(role, "submissions");
+  const wantsContributions = hasAccess(role, "contributions");
+
   const [
     posts,
     publishedPosts,
@@ -18,17 +28,53 @@ export default async function AdminDashboardPage() {
     contactsUnread,
     membershipPending,
     subscribers,
+    contributionsThisYear,
+    contributionsTotalAmount,
   ] = await Promise.all([
-    prisma.blogPost.count(),
-    prisma.blogPost.count({ where: { status: "PUBLISHED" } }),
-    prisma.partyMember.count(),
-    prisma.testimonial.count(),
-    prisma.contactMessage.count({ where: { isRead: false } }),
-    prisma.membershipApplication.count({ where: { status: "PENDING" } }),
-    prisma.newsletterSubscriber.count(),
+    wantsContent ? prisma.blogPost.count() : 0,
+    wantsContent ? prisma.blogPost.count({ where: { status: "PUBLISHED" } }) : 0,
+    wantsContent ? prisma.partyMember.count() : 0,
+    wantsContent ? prisma.testimonial.count() : 0,
+    wantsSubmissions
+      ? prisma.contactMessage.count({ where: { isRead: false } })
+      : 0,
+    wantsSubmissions
+      ? prisma.membershipApplication.count({ where: { status: "PENDING" } })
+      : 0,
+    wantsSubmissions ? prisma.newsletterSubscriber.count() : 0,
+    wantsContributions
+      ? prisma.contribution.count({
+          where: {
+            date: {
+              gte: new Date(Date.UTC(new Date().getFullYear(), 0, 1)),
+            },
+          },
+        })
+      : 0,
+    wantsContributions
+      ? prisma.contribution.aggregate({
+          where: {
+            date: {
+              gte: new Date(Date.UTC(new Date().getFullYear(), 0, 1)),
+            },
+            type: { not: "DON_EN_NATURE" },
+          },
+          _sum: { amount: true },
+        })
+      : null,
   ]);
 
-  const cards = [
+  type Card = {
+    label: string;
+    value: string | number;
+    icon: typeof Newspaper;
+    color: string;
+    iconColor: string;
+    href: string;
+    section: Section;
+  };
+
+  const cards: Card[] = [
     {
       label: "Articles publiés",
       value: `${publishedPosts}/${posts}`,
@@ -36,6 +82,7 @@ export default async function AdminDashboardPage() {
       color: "from-brand-blue/10 to-brand-blue/5",
       iconColor: "#1d9bf0",
       href: "/admin/blog",
+      section: "blog",
     },
     {
       label: "Membres du parti",
@@ -44,6 +91,7 @@ export default async function AdminDashboardPage() {
       color: "from-brand-orange/10 to-brand-orange/5",
       iconColor: "#ff700c",
       href: "/admin/members",
+      section: "members",
     },
     {
       label: "Témoignages",
@@ -52,6 +100,7 @@ export default async function AdminDashboardPage() {
       color: "from-brand-yellow/15 to-brand-yellow/5",
       iconColor: "#caa206",
       href: "/admin/testimonials",
+      section: "testimonials",
     },
     {
       label: "Messages non lus",
@@ -60,6 +109,7 @@ export default async function AdminDashboardPage() {
       color: "from-brand-blue/10 to-brand-blue/5",
       iconColor: "#1d9bf0",
       href: "/admin/submissions/contact",
+      section: "submissions",
     },
     {
       label: "Adhésions en attente",
@@ -68,6 +118,7 @@ export default async function AdminDashboardPage() {
       color: "from-brand-orange/10 to-brand-orange/5",
       iconColor: "#ff700c",
       href: "/admin/submissions/membership",
+      section: "submissions",
     },
     {
       label: "Abonnés newsletter",
@@ -76,8 +127,31 @@ export default async function AdminDashboardPage() {
       color: "from-emerald-100 to-emerald-50",
       iconColor: "#10b981",
       href: "/admin/submissions/newsletter",
+      section: "submissions",
+    },
+    {
+      label: `Contributions ${new Date().getFullYear()}`,
+      value: contributionsThisYear,
+      icon: Wallet,
+      color: "from-emerald-100 to-emerald-50",
+      iconColor: "#10b981",
+      href: "/admin/contributions",
+      section: "contributions",
+    },
+    {
+      label: "Total collecté (année)",
+      value: new Intl.NumberFormat("fr-FR").format(
+        contributionsTotalAmount?._sum.amount ?? 0,
+      ) + " FCFA",
+      icon: Wallet,
+      color: "from-brand-blue/10 to-brand-blue/5",
+      iconColor: "#1d9bf0",
+      href: "/admin/contributions",
+      section: "contributions",
     },
   ];
+
+  const visible = cards.filter((c) => hasAccess(role, c.section));
 
   return (
     <div className="px-8 py-10">
@@ -87,7 +161,7 @@ export default async function AdminDashboardPage() {
       </div>
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {cards.map((card) => (
+        {visible.map((card) => (
           <Link
             key={card.label}
             href={card.href}

@@ -2,12 +2,14 @@ import { notFound } from "next/navigation";
 import { BlogForm } from "@/components/admin/blog-form";
 import { PageHeader } from "@/components/admin/page-header";
 import { prisma } from "@/lib/db";
+import { requireSection } from "@/lib/auth";
 
 type Props = {
   params: Promise<{ id: string }>;
 };
 
 export default async function EditBlogPostPage({ params }: Props) {
+  await requireSection("blog");
   const { id } = await params;
   const post = await prisma.blogPost.findUnique({ where: { id } });
   if (!post) notFound();

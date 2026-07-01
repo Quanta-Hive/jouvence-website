@@ -2,12 +2,14 @@ import { notFound } from "next/navigation";
 import { TestimonialForm } from "@/components/admin/testimonial-form";
 import { PageHeader } from "@/components/admin/page-header";
 import { prisma } from "@/lib/db";
+import { requireSection } from "@/lib/auth";
 
 type Props = {
   params: Promise<{ id: string }>;
 };
 
 export default async function EditTestimonialPage({ params }: Props) {
+  await requireSection("testimonials");
   const { id } = await params;
   const item = await prisma.testimonial.findUnique({ where: { id } });
   if (!item) notFound();

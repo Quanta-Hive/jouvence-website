@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/db";
+import { requireSection } from "@/lib/auth";
 import { Badge } from "@/components/ui/badge";
 import { PageHeader } from "@/components/admin/page-header";
 import { MembershipRowActions } from "@/components/admin/membership-row-actions";
@@ -17,6 +18,7 @@ const STATUS_VARIANT: Record<string, "muted" | "success" | "orange"> = {
 };
 
 export default async function MembershipInboxPage() {
+  await requireSection("submissions");
   const applications = await prisma.membershipApplication.findMany({
     orderBy: [{ status: "asc" }, { createdAt: "desc" }],
   });

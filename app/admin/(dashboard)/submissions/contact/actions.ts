@@ -1,12 +1,11 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { auth } from "@/lib/auth";
+import { requireRole } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 
 async function requireUser() {
-  const session = await auth();
-  if (!session?.user) throw new Error("Unauthorized");
+  await requireRole("ADMIN", "COMMUNITY_MANAGER");
 }
 
 export async function markContactRead(id: string, isRead: boolean) {

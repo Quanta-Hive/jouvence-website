@@ -2,12 +2,14 @@ import { notFound } from "next/navigation";
 import { MemberForm } from "@/components/admin/member-form";
 import { PageHeader } from "@/components/admin/page-header";
 import { prisma } from "@/lib/db";
+import { requireSection } from "@/lib/auth";
 
 type Props = {
   params: Promise<{ id: string }>;
 };
 
 export default async function EditMemberPage({ params }: Props) {
+  await requireSection("members");
   const { id } = await params;
   const member = await prisma.partyMember.findUnique({ where: { id } });
   if (!member) notFound();

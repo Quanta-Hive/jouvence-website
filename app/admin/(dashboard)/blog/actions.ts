@@ -2,13 +2,12 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { auth } from "@/lib/auth";
+import { requireRole } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { blogPostSchema, type BlogPostInput } from "@/lib/validations/admin";
 
 async function requireUser() {
-  const session = await auth();
-  if (!session?.user) throw new Error("Unauthorized");
+  const session = await requireRole("ADMIN", "COMMUNITY_MANAGER");
   return session.user;
 }
 

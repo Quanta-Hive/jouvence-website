@@ -13,32 +13,48 @@ import {
   LogOut,
   Home,
   Building2,
+  Wallet,
+  ShieldCheck,
 } from "lucide-react";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
+import type { UserRole } from "@prisma/client";
 import { cn } from "@/lib/utils";
+import { ROLE_ACCESS, ROLE_LABELS, type Section } from "@/lib/permissions";
 
-const links = [
-  { href: "/admin", label: "Tableau de bord", icon: LayoutDashboard, exact: true },
-  { href: "/admin/home", label: "Page d'accueil", icon: Home },
-  { href: "/admin/blog", label: "Articles", icon: Newspaper },
-  { href: "/admin/members", label: "Membres", icon: Users },
-  { href: "/admin/testimonials", label: "Témoignages", icon: MessageSquareQuote },
-  { href: "/admin/submissions/contact", label: "Messages", icon: Mail },
-  { href: "/admin/submissions/membership", label: "Adhésions", icon: Inbox },
-  { href: "/admin/submissions/newsletter", label: "Newsletter", icon: Mail },
-  { href: "/admin/site-info", label: "Coordonnées", icon: Building2 },
-  { href: "/admin/settings", label: "Paramètres", icon: Settings },
+type NavLink = {
+  href: string;
+  label: string;
+  icon: typeof LayoutDashboard;
+  section: Section;
+  exact?: boolean;
+};
+
+const LINKS: NavLink[] = [
+  { href: "/admin", label: "Tableau de bord", icon: LayoutDashboard, section: "dashboard", exact: true },
+  { href: "/admin/home", label: "Page d'accueil", icon: Home, section: "home" },
+  { href: "/admin/blog", label: "Articles", icon: Newspaper, section: "blog" },
+  { href: "/admin/members", label: "Membres", icon: Users, section: "members" },
+  { href: "/admin/contributions", label: "Contributions", icon: Wallet, section: "contributions" },
+  { href: "/admin/testimonials", label: "Témoignages", icon: MessageSquareQuote, section: "testimonials" },
+  { href: "/admin/submissions/contact", label: "Messages", icon: Mail, section: "submissions" },
+  { href: "/admin/submissions/membership", label: "Adhésions", icon: Inbox, section: "submissions" },
+  { href: "/admin/submissions/newsletter", label: "Newsletter", icon: Mail, section: "submissions" },
+  { href: "/admin/site-info", label: "Coordonnées", icon: Building2, section: "siteInfo" },
+  { href: "/admin/users", label: "Utilisateurs", icon: ShieldCheck, section: "users" },
+  { href: "/admin/settings", label: "Paramètres", icon: Settings, section: "settings" },
 ];
 
 type Props = {
   userName?: string | null;
   userEmail?: string | null;
+  role: UserRole;
 };
 
-export function Sidebar({ userName, userEmail }: Props) {
+export function Sidebar({ userName, userEmail, role }: Props) {
   const pathname = usePathname();
-  const isActive = (link: (typeof links)[number]) =>
+  const visibleLinks = LINKS.filter((link) => ROLE_ACCESS[link.section].includes(role));
+  const isActive = (link: NavLink) =>
     link.exact ? pathname === link.href : pathname.startsWith(link.href);
 
   return (
@@ -52,7 +68,7 @@ export function Sidebar({ userName, userEmail }: Props) {
       </div>
 
       <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-4">
-        {links.map((link) => {
+        {visibleLinks.map((link) => {
           const Icon = link.icon;
           const active = isActive(link);
           return (
@@ -77,6 +93,9 @@ export function Sidebar({ userName, userEmail }: Props) {
         <div className="mb-3 px-3 text-xs">
           <div className="font-display font-semibold text-brand-navy">{userName ?? "—"}</div>
           <div className="truncate text-brand-navy/50">{userEmail}</div>
+          <div className="mt-1 inline-flex items-center rounded-full bg-brand-blue/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-brand-blue">
+            {ROLE_LABELS[role]}
+          </div>
         </div>
         <button
           type="button"

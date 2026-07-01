@@ -1,10 +1,12 @@
 import { prisma } from "@/lib/db";
+import { requireSection } from "@/lib/auth";
 import { Badge } from "@/components/ui/badge";
 import { PageHeader } from "@/components/admin/page-header";
 import { SubscriberRowActions } from "@/components/admin/subscriber-row-actions";
 import { formatDate } from "@/lib/utils";
 
 export default async function NewsletterPage() {
+  await requireSection("submissions");
   const subscribers = await prisma.newsletterSubscriber.findMany({
     orderBy: { createdAt: "desc" },
   });

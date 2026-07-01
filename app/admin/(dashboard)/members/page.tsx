@@ -2,12 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { Plus, Pencil, Star } from "lucide-react";
 import { prisma } from "@/lib/db";
+import { requireSection } from "@/lib/auth";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/admin/page-header";
 import { DeleteMemberButton } from "@/components/admin/delete-member-button";
 
 export default async function MembersListPage() {
+  await requireSection("members");
   const members = await prisma.partyMember.findMany({
     orderBy: [{ isLeader: "desc" }, { order: "asc" }],
   });

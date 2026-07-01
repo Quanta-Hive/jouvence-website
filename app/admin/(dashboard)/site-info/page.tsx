@@ -1,13 +1,10 @@
-import { redirect } from "next/navigation";
-import { auth } from "@/lib/auth";
+import { requireSection } from "@/lib/auth";
 import { PageHeader } from "@/components/admin/page-header";
 import { SiteInfoForm } from "@/components/admin/site-info-form";
 import { getSiteInfo } from "@/lib/site-settings";
 
 export default async function SiteInfoPage() {
-  const session = await auth();
-  if (!session?.user?.email) redirect("/admin/login");
-
+  await requireSection("siteInfo");
   const siteInfo = await getSiteInfo();
 
   return (

@@ -7,7 +7,22 @@
       "Bash(git push *)",
       "Bash(npx prisma *)",
       "Bash(xargs grep *)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(python *)",
+      "Bash(npx next *)",
+      "Bash(npx eslint *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3001/admin/contributions\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3001/admin/contributions/new\")",
+      "Bash(curl -s -L \"http://localhost:3001/admin/contributions\" -o /tmp/contrib.html)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /dev/null -w \"year=2026: %{http_code}\\\\n\" \"http://localhost:3001/admin/contributions?year=2026&type=COTISATION\")",
+      "Bash(curl -s -o /dev/null -w \"edit-404: %{http_code}\\\\n\" \"http://localhost:3001/admin/contributions/bogus-id\")",
+      "Bash(curl -s -o /dev/null -w \"users-list: %{http_code}\\\\n\" \"http://localhost:3001/admin/users\")",
+      "Bash(curl -s -o /dev/null -w \"users-new: %{http_code}\\\\n\" \"http://localhost:3001/admin/users/new\")",
+      "Bash(curl -s -o /dev/null -w \"settings: %{http_code}\\\\n\" \"http://localhost:3001/admin/settings\")",
+      "Bash(curl -s -o /dev/null -w \"blog: %{http_code}\\\\n\" \"http://localhost:3001/admin/blog\")",
+      "Bash(curl -s -o /dev/null -w \"contributions: %{http_code}\\\\n\" \"http://localhost:3001/admin/contributions\")"
     ]
   }
 }

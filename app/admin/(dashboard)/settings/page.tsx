@@ -1,11 +1,10 @@
-import { redirect } from "next/navigation";
-import { auth } from "@/lib/auth";
+import { requireSection } from "@/lib/auth";
 import { PageHeader } from "@/components/admin/page-header";
 import { ProfileForm, PasswordForm } from "@/components/admin/settings-forms";
 
 export default async function SettingsPage() {
-  const session = await auth();
-  if (!session?.user?.email) redirect("/admin/login");
+  const session = await requireSection("settings");
+  if (!session?.user?.email) return null;
 
   return (
     <div className="px-8 py-10">

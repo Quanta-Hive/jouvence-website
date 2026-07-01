@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { Plus, Pencil } from "lucide-react";
 import { prisma } from "@/lib/db";
+import { requireSection } from "@/lib/auth";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/admin/page-header";
 import { DeleteTestimonialButton } from "@/components/admin/delete-testimonial-button";
 
 export default async function TestimonialsListPage() {
+  await requireSection("testimonials");
   const items = await prisma.testimonial.findMany({ orderBy: { order: "asc" } });
 
   return (

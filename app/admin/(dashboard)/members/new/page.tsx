@@ -1,7 +1,9 @@
 import { MemberForm } from "@/components/admin/member-form";
 import { PageHeader } from "@/components/admin/page-header";
+import { requireSection } from "@/lib/auth";
 
-export default function NewMemberPage() {
+export default async function NewMemberPage() {
+  await requireSection("members");
   return (
     <div className="px-8 py-10">
       <PageHeader

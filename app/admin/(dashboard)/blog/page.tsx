@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Plus, Pencil } from "lucide-react";
 import { prisma } from "@/lib/db";
+import { requireSection } from "@/lib/auth";
 import { Badge } from "@/components/ui/badge";
 import { PageHeader } from "@/components/admin/page-header";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,7 @@ import { DeletePostButton } from "@/components/admin/delete-post-button";
 import { formatDate } from "@/lib/utils";
 
 export default async function BlogListPage() {
+  await requireSection("blog");
   const posts = await prisma.blogPost.findMany({
     orderBy: [{ status: "asc" }, { createdAt: "desc" }],
     include: { author: { select: { name: true } } },

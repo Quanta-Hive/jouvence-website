@@ -1,13 +1,10 @@
-import { redirect } from "next/navigation";
-import { auth } from "@/lib/auth";
+import { requireSection } from "@/lib/auth";
 import { PageHeader } from "@/components/admin/page-header";
 import { HomeContentForm } from "@/components/admin/home-content-form";
 import { getHomeContent } from "@/lib/site-settings";
 
 export default async function HomeContentPage() {
-  const session = await auth();
-  if (!session?.user?.email) redirect("/admin/login");
-
+  await requireSection("home");
   const content = await getHomeContent();
 
   return (

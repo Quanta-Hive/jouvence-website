@@ -1,7 +1,9 @@
 import { BlogForm } from "@/components/admin/blog-form";
 import { PageHeader } from "@/components/admin/page-header";
+import { requireSection } from "@/lib/auth";
 
-export default function NewBlogPostPage() {
+export default async function NewBlogPostPage() {
+  await requireSection("blog");
   return (
     <div className="px-8 py-10">
       <PageHeader

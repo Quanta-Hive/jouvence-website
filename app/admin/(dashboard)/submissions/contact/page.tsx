@@ -1,10 +1,12 @@
 import { prisma } from "@/lib/db";
+import { requireSection } from "@/lib/auth";
 import { Badge } from "@/components/ui/badge";
 import { PageHeader } from "@/components/admin/page-header";
 import { ContactRowActions } from "@/components/admin/contact-row-actions";
 import { formatDate } from "@/lib/utils";
 
 export default async function ContactInboxPage() {
+  await requireSection("submissions");
   const messages = await prisma.contactMessage.findMany({
     orderBy: [{ isRead: "asc" }, { createdAt: "desc" }],
   });

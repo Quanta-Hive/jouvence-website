@@ -1,13 +1,12 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { auth } from "@/lib/auth";
+import { requireRole } from "@/lib/auth";
 import { saveSiteInfo } from "@/lib/site-settings";
 import { siteInfoSchema, type SiteInfo } from "@/lib/validations/site-settings";
 
 async function requireUser() {
-  const session = await auth();
-  if (!session?.user) throw new Error("Unauthorized");
+  await requireRole("ADMIN");
 }
 
 export type ActionState = { ok: boolean; error?: string };
