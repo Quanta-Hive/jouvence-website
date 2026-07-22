@@ -15,6 +15,7 @@ const regions = [
   { region: "Nord", city: "Garoua", phone: "+237 670572377" },
   { region: "Extrême-Nord", city: "Maroua", phone: "+237 670572377" },
   { region: "Sud", city: "Ebolowa", phone: "+237 670572377" },
+  { region: "Diaspora", city: "Allemagne / France / Luxembourg", phone: "+49 1575424235" },
 ];
 
 type Props = {
