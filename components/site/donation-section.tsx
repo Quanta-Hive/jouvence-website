@@ -21,6 +21,8 @@ type Props = {
   dict: Dictionary;
 };
 
+const SHOW_MOBILE_MONEY = false;
+
 export function DonationSection({ dict }: Props) {
   const t = dict.getInvolved;
   const [copied, setCopied] = useState<string | null>(null);
@@ -91,45 +93,47 @@ export function DonationSection({ dict }: Props) {
   ];
 
   return (
-    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-      <div className="rounded-2xl border-2 border-brand-orange/20 bg-white p-8 shadow-lg">
-        <div className="mb-6 flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-orange/10">
-            <Smartphone size={24} className="text-brand-orange" />
-          </div>
-          <h3 className="font-display text-xl font-bold text-brand-navy">{t.mobileMoney}</h3>
-        </div>
-
-        <div className="space-y-6">
-          {mobileAccounts.map((acc) => (
-            <div key={acc.id} className="rounded-xl border border-brand-yellow/20 bg-brand-yellow/5 p-5">
-              <div className="mb-3 flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg font-display text-xs font-bold text-white" style={{ background: acc.badgeBg }}>
-                  {acc.badge}
-                </div>
-                <span className="font-display font-bold text-brand-navy">{acc.name}</span>
-              </div>
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-sm text-brand-navy/60">{acc.numberLabel}:</span>
-                <div className="flex items-center gap-2">
-                  <span className="font-display font-bold text-brand-navy">{acc.number}</span>
-                  <motion.button
-                    type="button"
-                    onClick={() => copy(acc.copyValue, acc.id)}
-                    className="rounded-lg p-1.5 transition-colors hover:bg-brand-navy/5"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    aria-label={t.copy}
-                  >
-                    {copied === acc.id ? <CheckCircle2 size={16} className="text-emerald-600" /> : <Copy size={16} className="text-brand-navy/40" />}
-                  </motion.button>
-                </div>
-              </div>
-              <div className="mt-2 border-t border-brand-yellow/20 pt-2 text-xs text-brand-navy/50">{acc.holder}</div>
+    <div className={`grid grid-cols-1 gap-8 ${SHOW_MOBILE_MONEY ? "lg:grid-cols-2" : "lg:mx-auto lg:max-w-xl"}`}>
+      {SHOW_MOBILE_MONEY && (
+        <div className="rounded-2xl border-2 border-brand-orange/20 bg-white p-8 shadow-lg">
+          <div className="mb-6 flex items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-orange/10">
+              <Smartphone size={24} className="text-brand-orange" />
             </div>
-          ))}
+            <h3 className="font-display text-xl font-bold text-brand-navy">{t.mobileMoney}</h3>
+          </div>
+
+          <div className="space-y-6">
+            {mobileAccounts.map((acc) => (
+              <div key={acc.id} className="rounded-xl border border-brand-yellow/20 bg-brand-yellow/5 p-5">
+                <div className="mb-3 flex items-center gap-2">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg font-display text-xs font-bold text-white" style={{ background: acc.badgeBg }}>
+                    {acc.badge}
+                  </div>
+                  <span className="font-display font-bold text-brand-navy">{acc.name}</span>
+                </div>
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-sm text-brand-navy/60">{acc.numberLabel}:</span>
+                  <div className="flex items-center gap-2">
+                    <span className="font-display font-bold text-brand-navy">{acc.number}</span>
+                    <motion.button
+                      type="button"
+                      onClick={() => copy(acc.copyValue, acc.id)}
+                      className="rounded-lg p-1.5 transition-colors hover:bg-brand-navy/5"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      aria-label={t.copy}
+                    >
+                      {copied === acc.id ? <CheckCircle2 size={16} className="text-emerald-600" /> : <Copy size={16} className="text-brand-navy/40" />}
+                    </motion.button>
+                  </div>
+                </div>
+                <div className="mt-2 border-t border-brand-yellow/20 pt-2 text-xs text-brand-navy/50">{acc.holder}</div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="rounded-2xl border-2 border-brand-blue/20 bg-white p-8 shadow-lg">
         <div className="mb-6 flex items-center gap-3">

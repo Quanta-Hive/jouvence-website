@@ -73,17 +73,17 @@
       "cta": "See our full program",
       "items": [
         {
-          "label": "Priority 1",
+          "label": "Workstream 1",
           "title": "Sovereignty & Integrity",
           "actions": ["Full conquest of national sovereignty", "Preservation of territorial integrity", "Reinforced defense and security"]
         },
         {
-          "label": "Priority 2",
+          "label": "Workstream 2",
           "title": "Order & Cohesion",
           "actions": ["Return to republican order", "Strengthening national cohesion", "Fair and exemplary justice"]
         },
         {
-          "label": "Priority 3",
+          "label": "Workstream 3",
           "title": "Emergence 2035",
           "actions": ["Performing, participatory economy", "Social and solidarity-based development", "Modern, sustainable infrastructure"]
         }

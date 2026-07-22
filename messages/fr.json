@@ -73,17 +73,17 @@
       "cta": "Voir notre programme complet",
       "items": [
         {
-          "label": "Priorité 1",
+          "label": "Chantier 1",
           "title": "Souveraineté & Intégrité",
           "actions": ["Conquête totale de la souveraineté nationale", "Préservation de l'intégrité du territoire", "Défense et sécurité renforcées"]
         },
         {
-          "label": "Priorité 2",
+          "label": "Chantier 2",
           "title": "Ordre & Cohésion",
           "actions": ["Retour à l'ordre républicain", "Renforcement de la cohésion nationale", "Justice juste et exemplaire"]
         },
         {
-          "label": "Priorité 3",
+          "label": "Chantier 3",
           "title": "Émergence 2035",
           "actions": ["Économie performante et participative", "Développement social et solidaire", "Infrastructure moderne et durable"]
         }
