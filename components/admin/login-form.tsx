@@ -52,7 +52,7 @@ export function LoginForm() {
           required
           autoComplete="username"
           placeholder="admin@parti-jouvence.cm"
-          className="border-white/10 bg-white/10 text-white placeholder:text-white/40"
+          className="border-white/10 bg-white/10 text-white placeholder:text-white/40 [color-scheme:dark] [-webkit-text-fill-color:white] caret-white"
         />
       </div>
       <div className="space-y-2">
@@ -64,7 +64,7 @@ export function LoginForm() {
           required
           autoComplete="current-password"
           placeholder="••••••••"
-          className="border-white/10 bg-white/10 text-white placeholder:text-white/40"
+          className="border-white/10 bg-white/10 text-white placeholder:text-white/40 [color-scheme:dark] [-webkit-text-fill-color:white] caret-white"
         />
       </div>
       <Button type="submit" disabled={pending} className="w-full">
