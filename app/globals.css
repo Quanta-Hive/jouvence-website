@@ -45,17 +45,23 @@ body {
   font-family: var(--font-display);
 }
 
+.auth-input,
+.auth-input:hover,
+.auth-input:focus,
+.auth-input:active {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
 .auth-input:-webkit-autofill,
 .auth-input:-webkit-autofill:hover,
 .auth-input:-webkit-autofill:focus,
 .auth-input:-webkit-autofill:active,
 .auth-input:autofill {
   -webkit-text-fill-color: #ffffff !important;
-  -webkit-box-shadow: 0 0 0 1000px #1a2a3a inset !important;
-  box-shadow: 0 0 0 1000px #1a2a3a inset !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
   caret-color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
-  transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 600000s 0s, color 600000s 0s;
 }
 
 .prose-blog {
