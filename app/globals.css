@@ -48,11 +48,13 @@ body {
 .auth-input:-webkit-autofill,
 .auth-input:-webkit-autofill:hover,
 .auth-input:-webkit-autofill:focus,
-.auth-input:-webkit-autofill:active {
-  -webkit-text-fill-color: #ffffff;
-  -webkit-box-shadow: 0 0 0 1000px rgba(26, 42, 58, 0.9) inset;
-  caret-color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.1);
+.auth-input:-webkit-autofill:active,
+.auth-input:autofill {
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0 1000px #1a2a3a inset !important;
+  box-shadow: 0 0 0 1000px #1a2a3a inset !important;
+  caret-color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
   transition: background-color 5000s ease-in-out 0s;
 }
 
